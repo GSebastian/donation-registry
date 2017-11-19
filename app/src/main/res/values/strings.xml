@@ -97,5 +97,9 @@
     <string name="action_export">Export</string>
     <string name="date">Date</string>
     <string name="amount">Amount</string>
+    <string name="title_activity_add_donation">AddDonationActivity</string>
+    <string name="pound_sign">£</string>
     <string name="name">Name</string>
+    <string name="add">Add</string>
+    <string name="add_another">Add another</string>
 </resources>

@@ -4,7 +4,7 @@
       tools:context="studio.roboto.donationregistry.donations.DonationsListActivity">
     <item
         android:id="@+id/action_export"
-        android:icon="@drawable/export"
+        android:icon="@drawable/ic_file_upload_white_24dp"
         android:title="@string/action_export"
         app:showAsAction="always"/>
 </menu>

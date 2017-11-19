@@ -12,6 +12,7 @@
         <meta-data
             android:name="net.hockeyapp.android.appIdentifier"
             android:value="${HOCKEYAPP_APP_ID}"/>
+
         <activity
             android:name=".donations.DonationsListActivity"
             android:label="@string/app_name"
@@ -21,6 +22,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".add_donation.AddDonationActivity"
+            android:label="@string/title_activity_add_donation"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".donations.DonationsListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="studio.roboto.donationregistry.donations.DonationsListActivity"/>
         </activity>
     </application>
 

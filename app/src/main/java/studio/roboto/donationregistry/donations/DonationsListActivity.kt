@@ -1,8 +1,8 @@
 package studio.roboto.donationregistry.donations
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.CollapsingToolbarLayout
-import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
@@ -14,6 +14,7 @@ import net.hockeyapp.android.UpdateManager
 import studio.roboto.donationregistry.BuildConfig
 import studio.roboto.donationregistry.DataConnector
 import studio.roboto.donationregistry.R
+import studio.roboto.donationregistry.add_donation.AddDonationActivity
 import studio.roboto.donationregistry.donations.DonationsListFragment.OnListFragmentInteractionListener
 import studio.roboto.donationregistry.dummy.DummyContent
 import studio.roboto.donationregistry.other.TimeFilter
@@ -42,8 +43,7 @@ class DonationsListActivity : AppCompatActivity(), OnListFragmentInteractionList
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            startActivity(Intent(this, AddDonationActivity::class.java))
         }
 
         if (BuildConfig.DEBUG) {
@@ -77,10 +77,6 @@ class DonationsListActivity : AppCompatActivity(), OnListFragmentInteractionList
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
         return when (item.itemId) {
             R.id.action_export ->
                 return true
@@ -89,7 +85,6 @@ class DonationsListActivity : AppCompatActivity(), OnListFragmentInteractionList
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_donations_list, menu)
         return true
     }
@@ -141,7 +136,6 @@ class DonationsListActivity : AppCompatActivity(), OnListFragmentInteractionList
 
     //region OnListFragmentInteractionListener
     override fun onListFragmentInteraction(item: DummyContent.DummyItem) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
     //endregion
 }
